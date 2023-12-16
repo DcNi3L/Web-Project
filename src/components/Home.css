@@ -421,6 +421,7 @@
 /* Left Side */
 .banners .container .left-box {
     width: 24%;
+    margin-left: 40px;
 }
 
 .banners .container .left-box .box {
@@ -430,7 +431,7 @@
 /* Right Side */
 .banners .container .right-box {
     width: 75%;
-    margin-left: -50px;
+    margin-left: -80px;
 }
 
 .banners .container .right-box .top {

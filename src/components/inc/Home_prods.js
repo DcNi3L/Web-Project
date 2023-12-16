@@ -4,7 +4,7 @@ const Homeprod = [
         name: 'product1',
         price: '26',
         img: 'images/p1.webp',
-        cat: '',
+        cat: 'tv',
         type: 'new',
     },
 
@@ -13,7 +13,7 @@ const Homeprod = [
         name: 'product2',
         price: '26',
         img: 'images/p2.webp',
-        cat: '',
+        cat: 'laptop',
         type: 'new',
     },
 
@@ -22,7 +22,7 @@ const Homeprod = [
         name: 'product3',
         price: '26',
         img: 'images/p3.webp',
-        cat: '',
+        cat: 'watch',
         type: 'new',
     },
 
@@ -31,7 +31,7 @@ const Homeprod = [
         name: 'product4',
         price: '26',
         img: 'images/p4.webp',
-        cat: '',
+        cat: 'speaker',
         type: 'featured',
     },
 
@@ -40,7 +40,7 @@ const Homeprod = [
         name: 'product5',
         price: '26',
         img: 'images/p5.webp',
-        cat: '',
+        cat: 'electronics',
         type: 'featured',
     },
 
@@ -49,7 +49,7 @@ const Homeprod = [
         name: 'product6',
         price: '26',
         img: 'images/p6.webp',
-        cat: '',
+        cat: 'phone',
         type: 'featured',
     },
 
@@ -58,7 +58,7 @@ const Homeprod = [
         name: 'product7',
         price: '26',
         img: 'images/p7.webp',
-        cat: '',
+        cat: 'speaker',
         type: 'top',
     },
 
@@ -67,7 +67,7 @@ const Homeprod = [
         name: 'product8',
         price: '26',
         img: 'images/p8.webp',
-        cat: '',
+        cat: 'speaker',
         type: 'top',
     },
 
@@ -76,7 +76,7 @@ const Homeprod = [
         name: 'product9',
         price: '26',
         img: 'images/p9.jpg',
-        cat: '',
+        cat: 'laptop',
         type: 'new',
     },
 
@@ -85,7 +85,7 @@ const Homeprod = [
         name: 'product10',
         price: '26',
         img: 'images/p10.jpg',
-        cat: '',
+        cat: 'headphone',
         type: 'featured',
     },
 
@@ -94,7 +94,7 @@ const Homeprod = [
         name: 'product11',
         price: '26',
         img: 'images/p11.jpg',
-        cat: '',
+        cat: 'electronics',
         type: 'top',
     },
 
@@ -103,7 +103,7 @@ const Homeprod = [
         name: 'product12',
         price: '26',
         img: 'images/p12.jpg',
-        cat: '',
+        cat: 'speaker',
         type: 'top',
     },
 

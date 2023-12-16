@@ -11,7 +11,7 @@ import { FaRegUser } from "react-icons/fa";
 // css
 import './Header.css';
 
-const Header = () => {
+const Header = ({search, setSearch, searchProd}) => {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   return (
@@ -24,8 +24,8 @@ const Header = () => {
 
               <div className='top_header-items'>
                 <div className='search-item'>
-                  <input type='text' value='' placeholder='Search...' />
-                  <button><IoSearch /></button>
+                  <input type='text' value={search} placeholder='Search...' onChange={(e) => setSearch(e.target.value)} />
+                  <button onClick={searchProd}><IoSearch /></button>
                 </div> 
 
                 {
@@ -96,7 +96,7 @@ const Header = () => {
 // fixed navbar listener
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
-      if (window.scrollY > 120) {
+      if (window.scrollY > 50) {
         document.getElementById('bottom-nav').classList.add('fixed-top');
         // add padding top to show content behind navbar
         const navbar_height = document.querySelector('.bottom_header').offsetHeight;

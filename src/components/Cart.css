@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cart {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.cart > h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #232323;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.cart > p {
+    margin-top: 5px;
+    color: #8a8a8a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart .empty-cart {
+    width: 100%;
+    align-items: center;
+}
+
+.empty-cart h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #232323;
+    letter-spacing: 1px;
+}
+
+.empty-cart button {
+    cursor: pointer;
+    margin-left: 45%;
+    margin-top: 10px;
+    padding: 10px 30px;
+    background: #fed700;
+    color: #cd1e76;
+    outline: none;
+    border: none;
+    border: 1px solid #fed700;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.empty-cart button:hover {
+    color: #fed700;
+    background: #cd1e76;
+}
+
+.cart .container {
+    max-width: 100%;
+    padding: 10px 20px;
+}
+
+.cart .container .box {
+    height: 250px;
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    align-items: center;
+}
+
+.cart .container .box .img-box img {
+    width: 270px;
+    height: 260px;
+    margin-bottom: 10px;
+}
+
+.cart .container .box .detail {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.cart .container .box .detail .info {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.cart .container .box .detail .info h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #8a8a8a;
+}
+
+.cart .container .box .detail .info h3 {
+    margin-top: 10px;
+    color: #232323;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.cart .container .box .detail .info p {
+    margin-top: 10px;
+    color: #232323;
+    text-transform: uppercase;
+}
+
+.cart .container .box .detail .quantity {
+    margin-top: 65px;
+    margin-left: 70px;
+    display: flex;
+}
+
+.cart .container .box .detail .quantity button {
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #232323;
+    border: none;
+    outline: none;
+    background: #fed700;
+    font-weight: 600;
+    height: 40px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.cart .container .box .detail .quantity .incr:hover {
+    color: #fff;
+    background: #18f618;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.cart .container .box .detail .quantity .decr:hover {
+    color: #fff;
+    background: #ff0000;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.cart .container .box .detail .quantity input {
+    width: 100px;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid #fed700;
+    border-top: 2px solid #fed700;
+    color: #232323;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart .container .box .detail .icon {
+    margin-top: 65px;
+    margin-left: 30px;
+    width: 40px;
+}
+
+.cart .container .box .detail .icon .icon-box {
+    cursor: pointer;
+    height: 40px;
+    background: #cd1e76;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart .bottom .total {
+    font-size: 22px;
+    color: #cd1e76;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cart .bottom button {
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background: none;
+    background: #fed700;
+    font-size: 16px;
+    color: #232323;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.cart .bottom button:hover {
+    color: #fed700;
+    background: #232323;
+}
