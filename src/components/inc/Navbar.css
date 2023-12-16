@@ -1,0 +1,13 @@
+nav {
+    font-weight: 600;
+}
+
+.nav-item .nav-link {
+    color: #fff !important;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+
+.nav-item .nav-link:hover {
+    color: #fed700 !important; 
+}
