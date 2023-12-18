@@ -59,20 +59,20 @@ const Header = ({ search, setSearch, searchProd, userData }) => {
 }
 
 
-// // fixed navbar listener
-// document.addEventListener("DOMContentLoaded", function () {
-//   window.addEventListener('scroll', function () {
-//     if (window.scrollY > 100) {
-//       document.getElementById('bottom-nav').classList.add('fixed-top');
-//       // add padding top to show content behind navbar
-//       const navbar_height = document.querySelector('.bottom_header').offsetHeight;
-//       document.body.style.paddingTop = navbar_height + 'px';
-//     } else {
-//       document.getElementById('bottom-nav').classList.remove('fixed-top');
-//       // remove padding top from body
-//       document.body.style.paddingTop = '0';
-//     }
-//   });
-// });
+// fixed navbar listener
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 100) {
+      document.getElementById('bottom-nav').classList.add('fixed-top');
+      // add padding top to show content behind navbar
+      const navbar_height = document.querySelector('.bottom_header').offsetHeight;
+      document.body.style.paddingTop = navbar_height + 'px';
+    } else {
+      document.getElementById('bottom-nav').classList.remove('fixed-top');
+      // remove padding top from body
+      document.body.style.paddingTop = '0';
+    }
+  });
+});
 
 export default Header;
