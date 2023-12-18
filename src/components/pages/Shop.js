@@ -1,16 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaEye } from "react-icons/fa";
-import { IoHeart } from "react-icons/io5";
+import { IoHeart, IoClose } from "react-icons/io5";
 
 //css
 import './Shop.css';
 
 
 const Shop = ({shop, Filter, AllProd, AddToCart}) => {
+    const[showDetail, setShowDetail] = useState(false)
+    const[detail, setDetail] = useState([])
+
+    const detailPage = (p) =>
+    {
+        const detailData = ([{p}])
+        const prodData = detailData[0]['p']
+
+        setDetail(prodData)
+        setShowDetail(true)
+    }
+
+    const closeDetail = () =>
+    {
+        setShowDetail(false)
+    }
+
     return (
         <>
+            {
+                showDetail ?
+                <>
+                    <div className='product-detail'>
+                        <button className='close-btn' onClick={closeDetail}><IoClose /></button>
+                        <div className='container'>
+                            <div className='img-box'>
+                                <img src={detail.img} alt=''></img>
+                            </div>
+
+                            <div className='info'>
+                                <h4>{detail.cat}</h4>
+                                <h2>{detail.name}</h2>
+                                <p>{detail.description}</p>
+                                <h3>{detail.price}₸</h3>
+                                <button onClick={() => AddToCart (detail)}>Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </>
+                : null
+            }
+
             <main className='shop'>
-                <h2># shop</h2>
+                <h2>shop</h2>
                 <p>Home . shop</p>
 
                 <div className='container'>
@@ -22,14 +62,14 @@ const Shop = ({shop, Filter, AllProd, AddToCart}) => {
 
                             <div className='box'>
                                 <ul>
-                                    <li onClick={() => AllProd ()}># all</li>
-                                    <li onClick={() => Filter ("tv")}># tv</li>
-                                    <li onClick={() => Filter ("laptop")}># laptop</li>
-                                    <li onClick={() => Filter ("watch")}># watch</li>
-                                    <li onClick={() => Filter ("speaker")}># speaker</li>
-                                    <li onClick={() => Filter ("electronics")}># electronics</li>
-                                    <li onClick={() => Filter ("headphone")}># headphone</li>
-                                    <li onClick={() => Filter ("phone")}># phone</li>
+                                    <li onClick={() => AllProd ()}>all</li>
+                                    <li onClick={() => Filter ("tv")}>tv</li>
+                                    <li onClick={() => Filter ("laptop")}>laptop</li>
+                                    <li onClick={() => Filter ("watch")}>watch</li>
+                                    <li onClick={() => Filter ("speaker")}>speaker</li>
+                                    <li onClick={() => Filter ("electronics")}>electronics</li>
+                                    <li onClick={() => Filter ("headphone")}>headphone</li>
+                                    <li onClick={() => Filter ("phone")}>phone</li>
                                 </ul>
                             </div>
                         </div>
@@ -62,7 +102,7 @@ const Shop = ({shop, Filter, AllProd, AddToCart}) => {
                                                     <div className='img-box'>
                                                         <img src={current.img} alt=''></img>
                                                         <div className='icon'>
-                                                            <div className='icon-box'>
+                                                            <div className='icon-box' onClick={() => detailPage (current)}>
                                                                 <FaEye />
                                                             </div>
                                                             <div className='icon-box'>
@@ -73,7 +113,7 @@ const Shop = ({shop, Filter, AllProd, AddToCart}) => {
 
                                                     <div className='detail'>
                                                         <h3>{current.name}</h3>
-                                                        <p>${current.price}</p>
+                                                        <p>{current.price}₸</p>
                                                         <button onClick={() => AddToCart (current)}>Add To Cart</button>
                                                     </div>
                                                 </div>

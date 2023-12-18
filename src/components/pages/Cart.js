@@ -54,7 +54,7 @@ const Cart = ({cart, setCart}) => {
   return (
     <>
         <main className='cart'>
-            <h3># cart</h3>
+            <h3>cart</h3>
             <p>Home . cart</p>
 
             {
@@ -82,8 +82,8 @@ const Cart = ({cart, setCart}) => {
                           <div className='info'>
                             <h4>{current.cat}</h4>
                             <h3>{current.name}</h3>
-                            <p>Price: ${current.price}</p>
-                            <p>Total: ${current.price * current.qty}</p>
+                            <p>Price: {current.price}₸</p>
+                            <p>Total: {current.price * current.qty}₸</p>
                           </div>
 
                           <div className='quantity'>
@@ -110,7 +110,7 @@ const Cart = ({cart, setCart}) => {
                 cart.length > 0 && 
                 <>
                   <div className='total'>
-                    <h4>Sub total: ${total}</h4>
+                    <h4>Sub total: {total}₸</h4>
                   </div>
 
                   <button>checkout</button>

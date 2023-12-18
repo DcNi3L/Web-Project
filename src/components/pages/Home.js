@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
-import { IoHeart } from "react-icons/io5";
+import { IoHeart, IoClose } from "react-icons/io5";
 import { BiLogoFacebookCircle, BiLogoTelegram, BiLogoInstagramAlt } from "react-icons/bi";
 import { SiYoutube } from "react-icons/si";
 import { RiShoppingCartFill } from "react-icons/ri";
@@ -10,56 +10,65 @@ import { RiShoppingCartFill } from "react-icons/ri";
 import './Home.css';
 
 //components
-import Homeproduct from './inc/Home_prods';
+import Homeproduct from '../include/Home_prods';
 
-const Home = () => {
+const Home = ({AddToCart}) => {
+    // product detail page
+    const[showDetail, setShowDetail] = useState(false)
+    const[detail, setDetail] = useState([])
+
+    const detailPage = (p) =>
+    {
+        const detailData = ([{p}])
+        const prodData = detailData[0]['p']
+
+        setDetail(prodData)
+        setShowDetail(true)
+    }
+
+    const closeDetail = () =>
+    {
+        setShowDetail(false)
+    }
 
     // Product Category
-    const[newProduct, setNewProduct] = useState([])
-    const[featuredProduct, setFeaturedProduct] = useState([])
-    const[topProduct, setTopProduct] = useState([])
+    const [newProduct, setNewProduct] = useState([])
+    const [featuredProduct, setFeaturedProduct] = useState([])
+    const [topProduct, setTopProduct] = useState([])
 
     // Trending product
-    const[trendingProduct, setTrendingProduct] = useState(Homeproduct)
-    const filtercate = (x) =>
-    {
-        const fillterProd = Homeproduct.filter((current) => 
-        {
+    const [trendingProduct, setTrendingProduct] = useState(Homeproduct)
+    const filtercate = (x) => {
+        const fillterProd = Homeproduct.filter((current) => {
             return current.type === x
         })
 
         setTrendingProduct(fillterProd)
     }
 
-    const allTrendingProd = () =>
-    {
+    const allTrendingProd = () => {
         setTrendingProduct(Homeproduct)
     }
 
 
     // Product type
-    useEffect(() => 
-    {
+    useEffect(() => {
         productCategory()
-    }) 
+    })
 
-    const productCategory = () => 
-    {
+    const productCategory = () => {
         // For new products
-        const newCategory = Homeproduct.filter((x) =>
-        {
+        const newCategory = Homeproduct.filter((x) => {
             return x.type === 'new'
         })
 
         // For featured
-        const featuredCategory = Homeproduct.filter((x) =>
-        {
+        const featuredCategory = Homeproduct.filter((x) => {
             return x.type === 'featured'
         })
 
         // For top
-        const topCategory = Homeproduct.filter((x) =>
-        {
+        const topCategory = Homeproduct.filter((x) => {
             return x.type === 'top'
         })
 
@@ -68,8 +77,31 @@ const Home = () => {
         setTopProduct(topCategory)
     }
 
-    return(
+    return (
         <>
+            {
+                showDetail ?
+                <>
+                    <div className='product-detail'>
+                        <button className='close-btn' onClick={closeDetail}><IoClose /></button>
+                        <div className='container'>
+                            <div className='img-box'>
+                                <img src={detail.img} alt=''></img>
+                            </div>
+
+                            <div className='info'>
+                                <h4>{detail.cat}</h4>
+                                <h2>{detail.name}</h2>
+                                <p>{detail.description}</p>
+                                <h3>{detail.price}₸</h3>
+                                <button onClick={() => AddToCart (detail)}>Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </>
+                : null
+            }
+
             <main className='home'>
                 <div className='top_banner'>
                     <div className='content'>
@@ -97,15 +129,14 @@ const Home = () => {
                             <div className='products'>
                                 <div className='container'>
                                     {
-                                        trendingProduct.map((current) => 
-                                        {
-                                            return(
+                                        trendingProduct.map((current) => {
+                                            return (
                                                 <>
                                                     <div className='box'>
                                                         <div className='img-box'>
                                                             <img src={current.img} alt=''></img>
                                                             <div className='icon'>
-                                                                <div className='icon-box'>
+                                                                <div className='icon-box' onClick={() => detailPage (current)}>
                                                                     <FaEye />
                                                                 </div>
 
@@ -117,17 +148,17 @@ const Home = () => {
 
                                                         <div className='info'>
                                                             <h3>{current.name}</h3>
-                                                            <p>${current.price}</p>
-                                                            <button className='btn btn-primary'>Add To Cart</button>
+                                                            <p>{current.price}₸</p>
+                                                            <button className='btn' onClick={() => AddToCart (current)}>Add To Cart</button>
                                                         </div>
                                                     </div>
                                                 </>
                                             )
-                                        } )
+                                        })
                                     }
                                 </div>
 
-                                <button>More...</button>
+                                <Link to='/shop'><button>More...</button></Link>
                             </div>
                         </div>
 
@@ -144,9 +175,9 @@ const Home = () => {
                                         </div>
 
                                         <div className='info'>
-                                            <h3>stephan robot</h3>
-                                            <h4>web designer</h4>
-                                            <p>Make and generate your stylish symbol and fonts for free . Pretty easy platform to make fancy text just by click and copy.</p>
+                                            <h3>David Roudes</h3>
+                                            <h4>Office Worker</h4>
+                                            <p>A wonderful electronics store! Here I found everything I need for my devices. Wide selection, convenient search, fast delivery. The products match the description, the quality is excellent. The support quickly helped with the questions. I recommend it to everyone who appreciates reliability and excellent service!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -156,26 +187,26 @@ const Home = () => {
                                         <h3>newsletter</h3>
                                     </div>
 
-                                    <div className='form'>
+                                    <div className='newsletter_form'>
                                         <p>join our malling list</p>
                                         <input type='email' placeholder='Your e-mail' autoComplete='off' />
                                         <button>subscribe</button>
                                         <div className='icon-box'>
-                                            <div className='icon instagram'>
+                                            <Link to='https://www.instagram.com/dcni3l_03/' target='_blank' className='icon instagram'>
                                                 <BiLogoInstagramAlt />
-                                            </div>
+                                            </Link>
 
-                                            <div className='icon facebook'>
+                                            <Link to='https://www.facebook.com/donnie.kun.12/' target='_blank' className='icon facebook'>
                                                 <BiLogoFacebookCircle />
-                                            </div>
+                                            </Link>
 
-                                            <div className='icon telegram'>
+                                            <Link to='https://t.me/DcNi3L' target='_blank' className='icon telegram'>
                                                 <BiLogoTelegram />
-                                            </div>
+                                            </Link>
 
-                                            <div className='icon youtube'>
+                                            <Link to='https://www.youtube.com/channel/UCVxq0i__I7V_y0tCsuxVnUg' target='_blank' className='icon youtube'>
                                                 <SiYoutube />
-                                            </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -217,22 +248,21 @@ const Home = () => {
                             </div>
 
                             {
-                                newProduct.map((current) =>
-                                {
-                                    return(
+                                newProduct.map((current) => {
+                                    return (
                                         <>
                                             <div className='product-box'>
                                                 <div className='img-box'>
                                                     <img src={current.img} alt=''></img>
                                                 </div>
-                                                
+
                                                 <div className='detail'>
                                                     <h3>{current.name}</h3>
-                                                    <p>${current.price}</p>
+                                                    <p>{current.price}₸</p>
                                                     <div className='icon'>
-                                                        <button><FaEye /></button>
+                                                        <button onClick={() => detailPage (current)}><FaEye /></button>
                                                         <button><IoHeart /></button>
-                                                        <button><RiShoppingCartFill /></button>
+                                                        <button onClick={() => AddToCart (current)}><RiShoppingCartFill /></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -250,22 +280,21 @@ const Home = () => {
                             </div>
 
                             {
-                                featuredProduct.map((current) =>
-                                {
-                                    return(
+                                featuredProduct.map((current) => {
+                                    return (
                                         <>
                                             <div className='product-box'>
                                                 <div className='img-box'>
                                                     <img src={current.img} alt=''></img>
                                                 </div>
-                                                
+
                                                 <div className='detail'>
                                                     <h3>{current.name}</h3>
-                                                    <p>${current.price}</p>
+                                                    <p>{current.price}₸</p>
                                                     <div className='icon'>
-                                                        <button><FaEye /></button>
+                                                        <button onClick={() => detailPage (current)}><FaEye /></button>
                                                         <button><IoHeart /></button>
-                                                        <button><RiShoppingCartFill /></button>
+                                                        <button onClick={() => AddToCart (current)}><RiShoppingCartFill /></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -283,22 +312,21 @@ const Home = () => {
                             </div>
 
                             {
-                                topProduct.map((current) =>
-                                {
-                                    return(
+                                topProduct.map((current) => {
+                                    return (
                                         <>
                                             <div className='product-box'>
                                                 <div className='img-box'>
                                                     <img src={current.img} alt=''></img>
                                                 </div>
-                                                
+
                                                 <div className='detail'>
                                                     <h3>{current.name}</h3>
-                                                    <p>${current.price}</p>
+                                                    <p>{current.price}₸</p>
                                                     <div className='icon'>
-                                                        <button><FaEye /></button>
+                                                        <button onClick={() => detailPage (current)}><FaEye /></button>
                                                         <button><IoHeart /></button>
-                                                        <button><RiShoppingCartFill /></button>
+                                                        <button onClick={() => AddToCart (current)}><RiShoppingCartFill /></button>
                                                     </div>
                                                 </div>
                                             </div>

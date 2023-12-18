@@ -18,7 +18,7 @@ const Footer = () => {
 
                         <div className='detail'>
                             <h3>Great Saving</h3>
-                            <p>Nostrud adipisicing nisi anim consectetur <br /> Lorem sit ad dolore.</p>
+                            <p>Unbelievable discounts on your must-haves.</p>
                         </div>
                     </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
 
                         <div className='detail'>
                             <h3>Free Delivery</h3>
-                            <p>Nostrud adipisicing nisi anim consectetur <br /> Lorem sit ad dolore.</p>
+                            <p>Receive your order swiftly and without extra cost.</p>
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
 
                         <div className='detail'>
                             <h3>24/7 Support</h3>
-                            <p>Nostrud adipisicing nisi anim consectetur <br /> Lorem sit ad dolore.</p>
+                            <p>Reliable support available around the clock.</p>
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
 
                         <div className='detail'>
                             <h3>Money Back</h3>
-                            <p>Nostrud adipisicing nisi anim consectetur <br /> Lorem sit ad dolore.</p>
+                            <p>Our commitment to your happiness is unwavering.</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <div className='right-box'>
                     <div className='header'>
                         <img src='images/logo.svg' alt='Shopify'></img>
-                        <p>Aute adipisicing dolore labore incididunt occaecat sunt eiusmod cillum.</p>
+                        <p>The largest trading company in Kazakhstan, a leader in the sale of electronics and household appliances.</p>
                     </div>
 
                     <div className='bottom'>
@@ -86,9 +86,9 @@ const Footer = () => {
                         <div className='box'>
                             <h3>Contact us</h3>
                             <ul>
-                                <li>Almaty, Kazakhstan</li>
-                                <li>+7(xxx)xxxxxxx</li>
-                                <li>example@info.com</li>
+                                <a href='https://maps.app.goo.gl/kEHskxigKz3794Xp6' target='_blank' rel='noreferrer'><li>Almaty, Kazakhstan</li></a>
+                                <a href='tel:+77075837312'><li>+7(707)-583-73-12</li></a>
+                                <a href='mailto:donniemek@gmail.com'><li>donniemek@gmail.com</li></a>
                             </ul>
                         </div>
                     </div>

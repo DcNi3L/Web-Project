@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.about h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #232323;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.about p {
+    margin-top: 5px;
+    color: #8a8a8a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.con {
+    max-width: 70%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.con .header {
+    max-width: 100%;
+
+}
+
+.con .header h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: 3px solid #232323;
+    color: #cd1e76;
+}
+
+.con .img {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.con .img::before {
+    content: "";
+    background: url('http://localhost:2402/images/about.webp') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(1px);
+    z-index: -1;
+}
+
+.con .img p {
+    background: transparent;
+    text-align: center;
+    width: 400px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #cd1e76;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+
+.con .info {
+    margin-block: 50px;
+    padding: 20px 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.con .info .icon {
+    width: 200px;
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #f6f6f6;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.24);
+}
+
+.icon .icon_box {
+    font-size: 32px;
+    margin-bottom: -20px;
+}
+
+.icon .text h3 {
+    color: #cd1e76;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+.con > p {
+    text-align: center;
+    color: #232323;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.con .link {
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    background: #cd1e76;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.con .link:hover {
+    background: #232323;
+}

@@ -102,11 +102,15 @@
     list-style: none;
     margin-top: 5px;
     color: #8a8a8a;
-    text-transform: capitalize;
+    text-transform: lowercase;
     letter-spacing: 1px;
     font-size: 12px;
     font-weight: 600;
     transition: 0.3s ease-in-out;
+}
+
+.footer .container .right-box .bottom .box ul a {
+    text-decoration: none;
 }
 
 .footer .container .right-box .bottom .box ul li:hover {

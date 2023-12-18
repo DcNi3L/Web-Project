@@ -160,7 +160,7 @@
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
     padding: 10px;
     margin-top: 10px;
-    color: #8a8a8a;
+    color: #cd1e76;
     background: #fff;
     transition: 0.3s ease-in-out;
 }
@@ -211,3 +211,98 @@
     color: #fed700;
     background: #232323;
 }
+
+.product-detail {
+    width: 900px;
+    height: 600px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    background: #fff;
+    border: 2px solid #f6f6f6;
+    border-radius: 8px;
+    padding: 20px 30px;
+    position: fixed;
+    top: 170px;
+    left: 390px;
+}
+
+.product-detail .close-btn {
+    cursor: pointer;
+    float: right;
+    outline: none;
+    border: none;
+    background: none;
+    color: #cd1e76;
+    font-size: 24px;
+}
+
+.product-detail .container {
+    width: 100%;
+    display: flex;
+    margin-top: 130px;
+    padding-inline: 30px;
+    border: 3px solid #f6f6f6;
+}
+
+.product-detail .container .img-box {
+    padding: 20px;
+    background: #f6f6f6;
+    border-radius: 10px;
+}
+
+.product-detail .container .img-box img {
+    width: 270px;
+    height: 270px;
+}
+
+.product-detail .container .info {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.product-detail .container .info h4 {
+    color: #8a8a8a;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.product-detail .container .info h2 {
+    margin-top: 50px;
+    color: #232323;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.product-detail .container .info p {
+    margin-top: 10px;
+    color: #8a8a8a;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.product-detail .container .info h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #cd1e76;
+}
+
+.product-detail .container .info button {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    background: none;
+    background: #cd1e76;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.product-detail .container .info button:hover {
+    background: #232323;
+} 

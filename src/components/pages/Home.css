@@ -138,7 +138,7 @@
     max-width: 100%;
 }
 
-.left-box .products > button {
+.left-box .products button {
     cursor: pointer;
     margin-top: 20px;
     margin-left: 43%;
@@ -232,8 +232,8 @@
     cursor: pointer;
     align-items: center;
     padding: 5px 20px;
-    margin-bottom: 10px;
-    margin-left: 14px;
+    margin-top: 0px;
+    margin-left: 7px;
     border: none;
     background: #fed700;
     border-radius: 5px;
@@ -286,8 +286,10 @@
 }
 
 .right-box .container .testimonial .detail .img-box img {
+    width: 200px;
+    height: 190px;
     margin-top: 40px;
-    margin-left: 29%;
+    margin-left: 35px;
 }
 
 .right-box .container .testimonial .detail .info {
@@ -339,18 +341,22 @@
     letter-spacing: 1px;
 }
 
-.right-box .container .newsletter .form {
+.right-box .container .newsletter .newsletter_form {
     margin-top: 10px;
     width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.right-box .container .newsletter .form p {
+.right-box .container .newsletter .newsletter_form p {
     text-align: center;
     text-transform: capitalize;
     color: #8a8a8a;
 }
 
-.right-box .container .newsletter .form input {
+.right-box .container .newsletter .newsletter_form input {
     margin-top: 10px;
     width: 100%;
     padding: 10px;
@@ -361,19 +367,25 @@
     color: #232323;
 }
 
-.right-box .container .newsletter .form button {
+.right-box .container .newsletter .newsletter_form button {
     cursor: pointer;
-    margin-top: 10px;
-    margin-left: 27%;
+    width: 100%;
+    margin-bottom: 10px;
     padding: 10px 30px;
     outline: none;
     border: none;
     background: none;
     background: #fed700;
     color: #232323;
+    transition: 0.3s ease-in-out;
 }
 
-.right-box .container .newsletter .form .icon-box {
+.right-box .container .newsletter .newsletter_form button:hover {
+    color: #fed700;
+    background: #232323;
+}
+
+.right-box .container .newsletter .newsletter_form .icon-box {
     margin-top: 20px;
     width: 100%;
     display: flex;
@@ -381,7 +393,7 @@
     align-items: center;
 }
 
-.right-box .container .newsletter .form .icon-box .icon {
+.right-box .container .newsletter .newsletter_form .icon-box .icon {
     cursor: pointer;
     color: #000;
     font-size: 35px;
@@ -390,19 +402,19 @@
     transition: 0.3s ease-in-out;
 }
 
-.right-box .container .newsletter .form .icon-box .instagram:hover {
+.right-box .container .newsletter .newsletter_form .icon-box .instagram:hover {
     color: #e1306c;
 }
 
-.right-box .container .newsletter .form .icon-box .facebook:hover {
+.right-box .container .newsletter .newsletter_form .icon-box .facebook:hover {
     color: #3b5998;
 }
 
-.right-box .container .newsletter .form .icon-box .telegram:hover {
+.right-box .container .newsletter .newsletter_form .icon-box .telegram:hover {
     color: #0088cc;
 }
 
-.right-box .container .newsletter .form .icon-box .youtube:hover {
+.right-box .container .newsletter .newsletter_form .icon-box .youtube:hover {
     color: #f00;
 }
 
@@ -544,3 +556,99 @@
     background: #f6f6f6;
     color: #232323;
 }
+
+
+.product-detail {
+    width: 900px;
+    height: 600px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    background: #fff;
+    border: 2px solid #f6f6f6;
+    border-radius: 8px;
+    padding: 20px 30px;
+    position: fixed;
+    top: 170px;
+    left: 320px;
+}
+
+.product-detail .close-btn {
+    cursor: pointer;
+    float: right;
+    outline: none;
+    border: none;
+    background: none;
+    color: #cd1e76;
+    font-size: 24px;
+}
+
+.product-detail .container {
+    width: 100%;
+    display: flex;
+    margin-top: 130px;
+    padding-inline: 30px;
+    border: 3px solid #f6f6f6;
+}
+
+.product-detail .container .img-box {
+    padding: 20px;
+    background: #f6f6f6;
+    border-radius: 10px;
+}
+
+.product-detail .container .img-box img {
+    width: 270px;
+    height: 270px;
+}
+
+.product-detail .container .info {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.product-detail .container .info h4 {
+    color: #8a8a8a;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.product-detail .container .info h2 {
+    margin-top: 50px;
+    color: #232323;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.product-detail .container .info p {
+    margin-top: 10px;
+    color: #8a8a8a;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.product-detail .container .info h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #cd1e76;
+}
+
+.product-detail .container .info button {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    background: none;
+    background: #cd1e76;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.product-detail .container .info button:hover {
+    background: #232323;
+} 

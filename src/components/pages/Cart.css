@@ -72,9 +72,9 @@
 }
 
 .cart .container .box .img-box img {
-    width: 270px;
-    height: 260px;
-    margin-bottom: 10px;
+    width: 240px;
+    height: 240px;
+    margin-left: 3px;
 }
 
 .cart .container .box .detail {
