@@ -17,6 +17,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .header {
@@ -78,3 +79,36 @@
     color: #fed700;
     background: #232323 ;
 } 
+
+@media (max-width: 576px) {
+    .login {
+        margin-block: 105px;
+        width: 350px;
+        height: 500px;
+    }
+
+    .headr {
+        background: transparent;
+    }
+
+    .headr h2 {
+        font-size: 30px;
+    }
+
+    p {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .box_input {
+        margin-left: 37%;
+    }
+
+    .box_input input {
+        padding: 15px 20px;
+    }
+
+    .login button {
+        padding: 15px 30px;
+    }
+}

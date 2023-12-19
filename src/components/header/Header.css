@@ -7,6 +7,7 @@
 
 .header {
     width: 100%;
+    background: #fff;
 }
 
 .header > .top_header {
@@ -131,4 +132,48 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
+}
+
+
+
+
+/* Media queries */
+@media (max-width: 576px) {
+    .top_header .logo > img {
+        width: 150px;
+        cursor: pointer;
+        object-fit: cover;
+    } 
+
+    .top_header-items {
+        width: 100px;
+        position: relative;
+        justify-content: flex-end;
+    }
+
+    .top_header-items .search-item input, .top_header-items .search-item button {
+        display: none;
+    }
+
+    .login-icon {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .login-btn button {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .user-icon, .offer {
+        display: none;
+    }
+
+    .bottom_header .user_prof .user-info {
+        margin-left: 0;
+    }
+
+    .user-info {
+        
+    }
 }

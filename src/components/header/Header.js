@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ search, setSearch, searchProd, userData }) => {
   return (
     <>
-      <header className='header'>
+      <header className='header sticky-top'>
         <div className='top_header'>
           <div className='logo'>
             <img src='images/logo.svg' alt='Logo'></img>
@@ -59,10 +59,10 @@ const Header = ({ search, setSearch, searchProd, userData }) => {
 }
 
 
-// // fixed navbar listener
+// fixed navbar listener
 // document.addEventListener("DOMContentLoaded", function () {
 //   window.addEventListener('scroll', function () {
-//     if (window.scrollY > 100) {
+//     if (window.scrollY > 5) {
 //       document.getElementById('bottom-nav').classList.add('fixed-top');
 //       // add padding top to show content behind navbar
 //       const navbar_height = document.querySelector('.bottom_header').offsetHeight;

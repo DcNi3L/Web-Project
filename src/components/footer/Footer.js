@@ -10,8 +10,8 @@ const Footer = () => {
     <>
         <footer className='footer'>
             <div className='container'>
-                <div className='left-box'>
-                    <div className='box'>
+                <div className='lb'>
+                    <div className='box bx'>
                         <div className='icon-box'>
                             <GiWallet />
                         </div>
@@ -22,7 +22,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className='box'>
+                    <div className='box bx'>
                         <div className='icon-box'>
                             <FaShippingFast />
                         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className='box'>
+                    <div className='box bx'>
                         <div className='icon-box'>
                             <FaHeadphones />
                         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className='box'>
+                    <div className='box bx'>
                         <div className='icon-box'>
                             <GiReceiveMoney />
                         </div>

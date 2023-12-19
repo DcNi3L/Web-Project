@@ -48,7 +48,7 @@ const Login = ({setUserData}) => {
   return (
     <>
         <main className='login'>
-            <div className='header'>
+            <div className='header headr'>
                 <h2>signup</h2>
             </div>
 

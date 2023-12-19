@@ -11,3 +11,52 @@ nav {
 .nav-item .nav-link:hover {
     color: #fed700 !important; 
 }
+
+.navbar {
+    display: none !important;
+}
+
+@media (max-width: 576px) {
+    .nav {
+        display: none !important;
+    }
+
+    .navbar {
+        display: inline-block !important;
+    }
+
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    .navbar-toggler {
+        margin-bottom: 10px;
+        border: 1px solid #fff !important;
+        color: #fff !important;
+        transition: 0.3s ease-in-out !important;
+    }
+
+    .navbar-toggler:hover {
+        color: #232323 !important;
+        background: #fff !important;
+    }
+
+    .collapse {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    .container-fluid {
+        text-transform: uppercase;
+    }
+
+    .nav-link {
+        text-align: left;
+    }
+}

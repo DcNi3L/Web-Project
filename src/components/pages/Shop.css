@@ -223,6 +223,7 @@
     position: fixed;
     top: 170px;
     left: 390px;
+    z-index: 100;
 }
 
 .product-detail .close-btn {
@@ -306,3 +307,67 @@
 .product-detail .container .info button:hover {
     background: #232323;
 } 
+
+@media (max-width: 576px) {
+    .shop .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-detail {
+        width: 360px;
+        height: 540px;
+        position: fixed;
+        top: 25%;
+        left: 28px;
+    }
+
+    .product-detail .container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-detail .container .img-box img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .product-detail .info p {
+        display: none;
+    }
+
+    .left-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 2px solid #232323;
+    }
+
+    .right-box {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .right-box .banner {
+        display: none;
+    }
+
+    .right-box .product-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop .container .right-box .product-box .product-container .box .img-box .icon {
+        margin-left: -50px;
+    }
+}

@@ -24,7 +24,7 @@ const About = () => {
             <p>Shopify Co. - the largest trading company in Kazakhstan, a leader in the sale of electronics and household appliances.</p>
           </div>
 
-          <div className='info'>
+          <div className='info inf'>
             <div className='icon'>
               <div className='icon_box'>
                 <FaCrown />
@@ -58,7 +58,7 @@ const About = () => {
 
           <p className='info_text'>Shopify Co. It is a member of the Euronics European purchasing cooperative, which unites 29 retail organizations from 36 countries, which allows the company to respond promptly to global trends in consumer demand and timely supply the most popular new products of electrical household appliances and electronics to Kazakhstanis.</p>
           
-          <div className='info'>
+          <div className='info inf'>
             <div className='icon'>
               <div className='icon_box'>
                 <FaShoppingCart />

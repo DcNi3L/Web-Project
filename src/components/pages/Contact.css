@@ -90,3 +90,16 @@
     color: #fed700;
     background: #232323;
 }
+
+
+@media (max-width: 576px) {
+    .contact {
+        margin-block: 105px;
+        align-items: center;
+    }
+
+    .container .form {
+        width: 370px;
+        margin-left: -20px;
+    }
+}

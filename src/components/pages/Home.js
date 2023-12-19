@@ -114,7 +114,7 @@ const Home = ({AddToCart}) => {
 
                 <div className='trending'>
                     <div className='container'>
-                        <div className='left-box'>
+                        <div className='leftb'>
                             <div className='header'>
                                 <div className='heading'>
                                     <h2 onClick={() => allTrendingProd()}>trending product</h2>
@@ -162,7 +162,7 @@ const Home = ({AddToCart}) => {
                             </div>
                         </div>
 
-                        <div className='right-box'>
+                        <div className='rb'>
                             <div className='container'>
                                 <div className='testimonial'>
                                     <div className='head'>
@@ -217,7 +217,7 @@ const Home = ({AddToCart}) => {
 
                 <div className='banners'>
                     <div className='container'>
-                        <div className='left-box'>
+                        <div className='leftb'>
                             <div className='box'>
                                 <img src='images/Multi-Banner-1.avif' alt='Banner'></img>
                             </div>
@@ -227,7 +227,7 @@ const Home = ({AddToCart}) => {
                             </div>
                         </div>
 
-                        <div className='right-box'>
+                        <div className='rb'>
                             <div className='top'>
                                 <img src='images/Multi-Banner-3.webp' alt=''></img>
                                 <img src='images/Multi-Banner-4.avif' alt=''></img>

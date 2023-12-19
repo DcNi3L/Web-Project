@@ -211,3 +211,45 @@
     color: #fed700;
     background: #232323;
 }
+
+
+/* Media */
+@media (max-width: 576px) {
+    .empty-cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .empty-cart button {
+        margin-left: 0;
+    }
+
+    .cart .container .box {
+        height: 680px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .cart .container .box .detail {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .cart .container .box .detail .quantity {
+        margin-top: 10px;
+        margin-left: 32px;
+    }
+
+    .cart .container .box .detail .icon {
+        margin-top: -40px;
+        margin-left: 240px;
+    }
+}

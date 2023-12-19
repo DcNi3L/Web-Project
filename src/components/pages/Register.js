@@ -51,7 +51,7 @@ const Register = ({setUserData}) => {
   return (
     <>
         <main className='register'>
-            <div className='header'>
+            <div className='header headr'>
                 <h2>signup</h2>
             </div>
 
