@@ -60,6 +60,7 @@ const Header = ({ search, setSearch, searchProd, userData }) => {
 
 
 // fixed navbar listener
+<<<<<<< HEAD
 // document.addEventListener("DOMContentLoaded", function () {
 //   window.addEventListener('scroll', function () {
 //     if (window.scrollY > 5) {
@@ -74,5 +75,21 @@ const Header = ({ search, setSearch, searchProd, userData }) => {
 //     }
 //   });
 // });
+=======
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 100) {
+      document.getElementById('bottom-nav').classList.add('fixed-top');
+      // add padding top to show content behind navbar
+      const navbar_height = document.querySelector('.bottom_header').offsetHeight;
+      document.body.style.paddingTop = navbar_height + 'px';
+    } else {
+      document.getElementById('bottom-nav').classList.remove('fixed-top');
+      // remove padding top from body
+      document.body.style.paddingTop = '0';
+    }
+  });
+});
+>>>>>>> d8c43f3885a392ea75b44c0190b4d39efd1a46d1
 
 export default Header;
